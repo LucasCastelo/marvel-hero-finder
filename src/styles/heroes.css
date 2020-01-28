@@ -1,0 +1,22 @@
+.heroes {
+}
+
+.heroes__search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.heroes__search__img {
+  width: 100px;
+  height: 45px;
+}
+
+.heroes__separator {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+}
