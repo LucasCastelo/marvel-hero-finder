@@ -1,7 +1,5 @@
 import {
-  GET_HEROES_LIST,
   SET_HEROES_LIST,
-  GET_HERO,
   SET_HERO,
   SET_LOADING_FALSE,
   SET_LOADING_TRUE
@@ -16,7 +14,6 @@ const apiKey = '31d890e05fa50da9d644820877a62900';
 //SET THE HEROES LIST TO SHOW TO THE USER
 
 export const setHeroesList = data => {
-  console.log(data);
   return {
     type: SET_HEROES_LIST,
     payload: data
@@ -25,8 +22,9 @@ export const setHeroesList = data => {
 
 //GET THE HEROES LIST AND CALLS setHeroesList(response)
 export const getHeroesList = (data = 'hulk') => {
-  return dispatch => {
-    Axios.get(
+  return async dispatch => {
+    dispatch(setLoadingTrue());
+    await Axios.get(
       `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${data}&limit=20&ts=${ts}&apikey=${apiKey}&hash=${md5(
         ts + privApi + apiKey
       )}`
@@ -36,7 +34,6 @@ export const getHeroesList = (data = 'hulk') => {
         dispatch(setLoadingFalse());
       })
       .catch(err => {
-        console.log(err.message);
         dispatch(setLoadingFalse());
       });
   };
@@ -64,7 +61,6 @@ export const getHero = data => {
         dispatch(setLoadingFalse());
       })
       .catch(err => {
-        console.log(err.message);
         dispatch(setLoadingFalse());
       });
   };

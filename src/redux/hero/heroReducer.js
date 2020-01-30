@@ -14,19 +14,20 @@ const heroesState = {
 const heroesReducer = (state = heroesState, action) => {
   switch (action.type) {
     case SET_HERO:
+      console.log(action.payload);
       return { ...state, hero: action.payload };
 
     case SET_HEROES_LIST:
       return { ...state, heroesList: action.payload };
-      break;
+
     case SET_LOADING_TRUE:
       return { ...state, isLoading: true };
-      break;
+
     case SET_LOADING_FALSE:
       return { ...state, isLoading: false };
-      break;
+
     default:
-      return { state };
+      return { ...state };
   }
 };
 
