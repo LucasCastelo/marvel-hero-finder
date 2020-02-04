@@ -1,0 +1,43 @@
+.font__size--small {
+  font-size: 1em;
+}
+.font__size--medium {
+  font-size: 20em;
+}
+.font__size--big {
+  font-size: 2.5em;
+}
+
+.font__size--disclaimer {
+  font-size: 1em;
+}
+
+@media screen and (max-width: 400px) {
+  .font__size--big {
+    font-size: 2em;
+  }
+  .font__size--small {
+    font-size: 0.8em;
+  }
+
+  .font__size--medium {
+    font-size: 1.6em;
+  }
+
+  .font__size--disclaimer {
+    font-size: 0.8em;
+  }
+}
+
+.font__mont--light {
+  font-family: 'Montserrat' sans-serif;
+  font-weight: 300;
+}
+.font__mont--regular {
+  font-family: 'Montserrat' sans-serif;
+  font-weight: 400;
+}
+.font__mont--bold {
+  font-family: 'Montserrat' sans-serif;
+  font-weight: 800;
+}

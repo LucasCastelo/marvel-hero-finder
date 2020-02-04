@@ -2,6 +2,7 @@
 import React from 'react';
 //COMPONENTS
 import Search from './components/Search';
+import HeroesList from './components/Heroes';
 //REDUX STUFF
 import { Provider } from 'react-redux';
 import store from './redux/store';
@@ -9,7 +10,7 @@ import store from './redux/store';
 import { Switch, Route } from 'react-router-dom';
 //CSS AND STYLING STUFF
 import bgImage from './assets/images/bg.png';
-import './styles/index.css';
+import './styles/fonts.css';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <Search></Search>
+          </Route>
+          <Route exact path='/heroes'>
+            <HeroesList></HeroesList>
           </Route>
         </Switch>
       </Provider>
@@ -28,11 +32,9 @@ function App() {
 const appStyleBg = {
   backgroundImage: `url(${bgImage})`,
   backgroundAttachment: 'fixed',
-  minHeight: '100vh',
-  position: 'absolute',
-  width: '100%',
-  top: '0',
-  left: '0'
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  minHeight: '100vh'
 };
 
 export default App;

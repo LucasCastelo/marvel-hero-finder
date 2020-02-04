@@ -1,0 +1,35 @@
+.top__search {
+  opacity: 0;
+  transform: translateY(-90px);
+}
+
+.top__search__image {
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.top__search__image:hover {
+  transform: scale(1.2);
+}
+
+@keyframes intro_search {
+  0% {
+    transform: translateY(-90px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes outro_search {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-90px);
+    opacity: 0;
+  }
+}

@@ -22,6 +22,7 @@ export const setHeroesList = data => {
 
 //GET THE HEROES LIST AND CALLS setHeroesList(response)
 export const getHeroesList = (data = 'hulk') => {
+  console.log(`heroActions.js :: getHeroesList(${data})`);
   return async dispatch => {
     dispatch(setLoadingTrue());
     await Axios.get(

@@ -1,0 +1,21 @@
+.card__holster {
+  background-color: white;
+  border-radius: 40px;
+}
+
+.card__holster .__image {
+  border-radius: 40px 0px 0px 40px;
+}
+
+.card__holster .__details p {
+  margin: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .card__holster .__image {
+    border-radius: 40px 40px 0px 0px;
+  }
+  .card__holster .__details {
+    text-align: center;
+  }
+}
